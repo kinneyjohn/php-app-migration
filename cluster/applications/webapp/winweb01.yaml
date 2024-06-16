@@ -87,6 +87,8 @@ spec:
             - name: tablet
               bus: usb
               type: tablet
+          tpm:
+            persistent: true
         resources:
           requests:
             memory: 16Gi
