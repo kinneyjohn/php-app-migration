@@ -5,6 +5,7 @@ namespace: php-modernization
 
 resources:
   - database.yaml
-  - winweb.yaml
+  - winweb01.yaml
+  - winweb02.yaml
   - route.yaml
   - namespace.yaml
