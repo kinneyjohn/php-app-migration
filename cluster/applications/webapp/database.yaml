@@ -4,6 +4,7 @@ kind: VirtualMachine
 metadata:
   labels:
     app: database
+    app.kubernetes.io/part-of: php-app
   name: database
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true

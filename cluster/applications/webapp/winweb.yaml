@@ -4,9 +4,11 @@ kind: VirtualMachine
 metadata:
   labels:
     app: winweb
+    app.kubernetes.io/part-of: php-app
   name: winweb01
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    app.openshift.io/connects-to: '[{"apiVersion":"kubevirt.io/v1","kind":"VirtualMachine","name":"database"}]'
 spec:
   running: true
   dataVolumeTemplates:
@@ -26,6 +28,10 @@ spec:
           volumeMode: Block
   template:
     metadata:
+      annotations:
+        vm.kubevirt.io/flavor: medium
+        vm.kubevirt.io/os: windows2k12r2
+        vm.kubevirt.io/workload: server
       labels:
         app: winweb
         kubevirt.io/domain: winweb01
@@ -98,9 +104,11 @@ kind: VirtualMachine
 metadata:
   labels:
     app: winweb
+    app.kubernetes.io/part-of: php-app
   name: winweb02
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    app.openshift.io/connects-to: '[{"apiVersion":"kubevirt.io/v1","kind":"VirtualMachine","name":"database"}]'
 spec:
   running: true
   dataVolumeTemplates:
@@ -120,6 +128,10 @@ spec:
           volumeMode: Block
   template:
     metadata:
+      annotations:
+        vm.kubevirt.io/flavor: medium
+        vm.kubevirt.io/os: windows2k12r2
+        vm.kubevirt.io/workload: server
       labels:
         app: winweb
         kubevirt.io/domain: winweb02
