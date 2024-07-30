@@ -12,7 +12,7 @@ spec:
   source:
     path: cluster/applications/webapp
     repoURL: https://github.com/kinneyjohn/php-app-migration.git
-    targetRevision: app-only+1
+    targetRevision: app-only+2
   syncPolicy:
     automated:
       prune: true
