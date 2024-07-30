@@ -9,3 +9,7 @@ resources:
   - winweb02.yaml
   - route.yaml
   - namespace.yaml
+  - imagestream.yaml
+  - buildconfig.yaml
+  - php-fpm-conf.yaml
+  - linweb.yaml
