@@ -24,7 +24,7 @@ spec:
         storage:
           resources:
             requests:
-              storage: 90Gi
+              storage: 50Gi
           volumeMode: Block
   template:
     metadata:
